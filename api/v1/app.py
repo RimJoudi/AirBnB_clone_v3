@@ -18,7 +18,7 @@ def appcontext():
     return storage.close()
 
 
-@app.error(404)
+@app.errorhandler(404)
 def pageNotFound():
     '''
         returns a JSON-formatted 404 status code response.
